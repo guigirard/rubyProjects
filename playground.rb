@@ -1,5 +1,13 @@
-puts "What is your first name?"
-first_name = gets.chomp
-puts "What is your last name?"
-last_name = gets.chomp
-puts "Welcome to the program #{first_name} #{last_name}"
+puts "Enter your score"
+prompt = gets.chomp
+
+results = case prompt.to_i
+  when 0..60 then "F"
+  when 61..70 then "D"
+  when 71..80 then "C"
+  when 81..90 then "B"
+  when 91..100 then "A"
+  else "Invalid score"
+end
+
+puts results
